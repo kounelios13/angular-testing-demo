@@ -1,0 +1,20 @@
+image: node:latest
+
+cache:
+  paths:
+    - node_modules/
+
+stages:
+  - deploy
+
+deploy:
+  stage: deploy
+  environment:
+    name: development
+  script:
+    - npm install
+    - npm build --production
+    - npm run e2e
+    - npm run test
+  only:
+    - master
