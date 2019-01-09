@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CarsService} from '../services/cars.service';
 
 @Component({
   selector: 'demo-cars',
@@ -7,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarsComponent implements OnInit {
 
-  cars:string[] = ["Mazda","Fiat"];
-  constructor() { }
+  cars: string[] = [];
+  constructor(private carService: CarsService) { }
 
-  ngOnInit() {
+  async ngOnInit() {
+    this.cars = await this.carService.getCars();
   }
 
 }

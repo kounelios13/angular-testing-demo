@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CarsComponent } from './cars.component';
 import { ListComponent } from '../list/list.component';
+import {CarsService} from '../services/cars.service';
 
 describe('CarsComponent', () => {
   let component: CarsComponent;
@@ -9,24 +10,21 @@ describe('CarsComponent', () => {
   let totalCars: number;
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CarsComponent , ListComponent]
+      declarations: [ CarsComponent , ListComponent],
+      providers:[CarsService]
     })
     .compileComponents();
-  }));
-
-  beforeEach(() => {
     fixture = TestBed.createComponent(CarsComponent);
     component = fixture.componentInstance;
     totalCars = component.cars.length;
     fixture.detectChanges();
-  });
+  }));
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
 
   it('should find exactly one car', () => {
-    const copy = component.cars.slice();
     component.cars = ['Honda'];
     fixture.detectChanges();
     const items = fixture.nativeElement.querySelectorAll('.list-item');
@@ -39,4 +37,8 @@ describe('CarsComponent', () => {
   });
 
 
+  it('should receive 2 cars from service',()=>{
+    const {cars} = component;
+    expect(cars.length).toBe(2);
+  });
 });
