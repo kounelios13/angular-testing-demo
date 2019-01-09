@@ -1,6 +1,9 @@
+[![Build Status](https://travis-ci.com/kounelios13/angular-testing-demo.svg?branch=master)](https://travis-ci.com/kounelios13/angular-testing-demo)
+
 # Testing
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
+
 
 ## Development server
 
