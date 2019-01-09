@@ -6,10 +6,10 @@ import { ListComponent } from '../list/list.component';
 describe('CarsComponent', () => {
   let component: CarsComponent;
   let fixture: ComponentFixture<CarsComponent>;
-  let totalCars:number;
+  let totalCars: number;
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CarsComponent ,ListComponent]
+      declarations: [ CarsComponent , ListComponent]
     })
     .compileComponents();
   }));
@@ -25,18 +25,18 @@ describe('CarsComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should find exactly one car',()=>{
-    let copy = component.cars.slice();
-    component.cars = ["Honda"];
+  it('should find exactly one car', () => {
+    const copy = component.cars.slice();
+    component.cars = ['Honda'];
     fixture.detectChanges();
     const items = fixture.nativeElement.querySelectorAll('.list-item');
     expect(items.length).toBe(1);
-  })
+  });
 
-  it(`should find all car items`,()=>{
+  it(`should find all car items`, () => {
     const items = fixture.nativeElement.querySelectorAll('.list-item');
     expect(items.length).toEqual(component.cars.length);
   });
 
-  
+
 });
