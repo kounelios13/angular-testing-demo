@@ -1,7 +1,9 @@
 <div class="menubar">
-  <div class="ui-g">
+  <div class="ui-g menubar-container">
     <div class="ui-g-6 text-center" *ngFor="let item of items">
-      <a routerLink="{{item.link}}" class="menubar-link">{{item.label}}</a>
+      <div class="menubar-link-container">
+        <a routerLink="{{item.link}}" class="menubar-link">{{item.label}}</a>
+      </div>
     </div>
   </div>
 </div>
