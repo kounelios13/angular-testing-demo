@@ -11,6 +11,10 @@ import { CarsComponent } from './cars/cars.component';
 import { HomeComponent } from './home/home.component';
 import {CardModule} from 'primeng/card';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MenubarModule} from './menubar/menubar.module';
+import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +27,10 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     AppRoutingModule,
     ListModule,
-    CardModule
+    CardModule,
+    FormsModule,
+    HttpClientModule,
+    MenubarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

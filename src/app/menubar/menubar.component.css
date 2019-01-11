@@ -1,0 +1,11 @@
+.text-center{
+  text-align:center;
+}
+
+.menubar-link{
+  transition:800ms ease-in-out;
+}
+
+.menubar-link:hover{
+  background:#ff867c ;
+}
