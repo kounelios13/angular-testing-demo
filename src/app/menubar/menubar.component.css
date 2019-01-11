@@ -3,19 +3,25 @@
 }
 
 .menubar{
-  background:#d32f2f ;
+  /*background:#d32f2f ;*/
   padding: 2vh;
   border-radius:2px;
 }
 
 .menubar-link{
   transition:800ms ease-in-out;
+  color:black;
+  font-weight: bolder;
+}
+
+.menubar-link:hover{
+  text-decoration: underline;
 }
 
 .menubar-link:hover{
   background:#ff867c ;
 }
 .menubar-link-container{
-  background: red;
+  //background: red;
   width: 100%;
 }
