@@ -17,17 +17,17 @@ export class MenubarComponent implements OnInit {
   @Input()
   background: string;
   @Input()
-  linkColor:string;
+  linkColor: string;
   constructor() { }
 
   ngOnInit() {
   }
 
-  getBackgroundColor(){
+  getBackgroundColor() {
     return this.background || 'rgba(0,0,0,.8) !important';
   }
 
-  getGridClass(){
+  getGridClass() {
     const maxColumns = 12;
     const number = maxColumns / this.items.length;
     const cssClass = `ui-g-${number}`;
