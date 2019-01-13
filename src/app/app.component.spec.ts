@@ -15,8 +15,7 @@ describe('AppComponent', () => {
         MenubarModule
       ],
       declarations: [
-        AppComponent,
-        MenubarComponent
+        AppComponent
       ],
     }).compileComponents();
   }));
@@ -27,11 +26,4 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  // it('should create a list with 2 items',()=>{
-  //   const fixture = TestBed.createComponent(AppComponent);
-  //   const compiled = fixture.debugElement;
-  //   fixture.detectChanges();
-  //   const li = compiled.nativeElement.querySelectorAll('li');
-  //   expect(li.length).toEqual(2)
-  // });
 });

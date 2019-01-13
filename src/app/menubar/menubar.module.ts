@@ -1,17 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MenubarComponent, MenuBarItem } from './menubar.component';
-import {HttpClientModule} from '@angular/common/http';
-import {RouterModule} from '@angular/router';
-import {FormsModule} from '@angular/forms';
+import { MenubarComponent } from './menubar.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [MenubarComponent],
   imports: [
     CommonModule,
-    HttpClientModule,
-    RouterModule,
-    FormsModule
+    RouterModule.forRoot([])
   ],
   exports: [MenubarComponent]
 })
