@@ -21,6 +21,7 @@ export class MenubarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.background = this.background || 'rgba(0,0,0,.8) !important';
   }
 
   getBackgroundColor() {
@@ -33,4 +34,9 @@ export class MenubarComponent implements OnInit {
     const cssClass = `ui-g-${number}`;
     return cssClass;
   }
+
+  getLinkColor(){
+    const defaultColor = 'black';
+    return this.linkColor || defaultColor;
+  };
 }
