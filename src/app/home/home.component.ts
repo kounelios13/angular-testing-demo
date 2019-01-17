@@ -7,13 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  homeDevices:string[];
-  labDevices:string[];
+  homeDevices: string[];
+  labDevices: string[];
   constructor() { }
 
   ngOnInit() {
-    this.homeDevices  = ['Laptop','Smartphone'];
-    this.labDevices = ['Desktop','Server','Dell monitor']
+    this.homeDevices  = ['Laptop', 'Smartphone'];
+    this.labDevices = ['Desktop', 'Server', 'Dell monitor'];
   }
 
 }

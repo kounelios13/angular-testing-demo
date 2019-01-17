@@ -24,7 +24,7 @@ describe('CarsComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-  
+
   it('should create', () => {
     expect(component).toBeTruthy();
   });
@@ -43,7 +43,7 @@ describe('CarsComponent', () => {
 
 
   it('should receive 2 cars from service', async () => {
-    //We need to manually call component life cycle hooks
+    // We need to manually call component life cycle hooks
     await component.ngOnInit();
     fixture.detectChanges();
     const cars = component.cars;

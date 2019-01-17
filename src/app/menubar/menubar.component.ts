@@ -31,12 +31,12 @@ export class MenubarComponent implements OnInit {
   getGridClass() {
     const maxColumns = 12;
     const number = maxColumns / this.items.length;
-    const cssClass = `ui-g-${number}`;
+    const cssClass = `ui-sm-12 ui-md-${number} ui-lg-${number} ui-xl-${number}`;
     return cssClass;
   }
 
-  getLinkColor(){
+  getLinkColor() {
     const defaultColor = 'black';
     return this.linkColor || defaultColor;
-  };
+  }
 }

@@ -6,9 +6,9 @@ import { of } from 'rxjs';
 })
 export class CarsService {
 
-  cars = ["Fiat","Mazda"];
+  cars = ['Fiat', 'Mazda'];
   constructor() { }
-  getCars(){
+  getCars() {
     return of(this.cars).toPromise();
   }
 }

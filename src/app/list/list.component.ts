@@ -8,11 +8,11 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ListComponent implements OnInit {
 
   @Input()
-  items:string[];
+  items: string[];
   @Input()
-  visible:boolean = true;
+  visible = true;
   @Input()
-  highlighted:boolean = false;
+  highlighted = false;
   constructor() { }
 
   ngOnInit() {
