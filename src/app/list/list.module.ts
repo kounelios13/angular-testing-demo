@@ -7,7 +7,7 @@ import { ListComponent } from './list.component';
   imports: [
     CommonModule
   ],
-  exports:[ListComponent],
-  providers:[]
+  exports: [ListComponent],
+  providers: []
 })
 export class ListModule { }

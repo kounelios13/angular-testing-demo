@@ -11,7 +11,7 @@ describe('HomeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomeComponent ,ListComponent,Card,CarsComponent]
+      declarations: [ HomeComponent , ListComponent, Card, CarsComponent]
     })
     .compileComponents();
   }));

@@ -35,8 +35,8 @@ export class MenubarComponent implements OnInit {
     return cssClass;
   }
 
-  getLinkColor(){
+  getLinkColor() {
     const defaultColor = 'black';
     return this.linkColor || defaultColor;
-  };
+  }
 }
