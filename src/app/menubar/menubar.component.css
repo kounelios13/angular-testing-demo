@@ -25,3 +25,20 @@
   //background: red;
   width: 100%;
 }
+
+@media all and (max-width: 640px) {
+  .menubar-link-container{
+    border: 2px solid black;
+    border-radius:5px;
+  }
+}
+
+@media all and (max-width: 520px) {
+  .menubar-link{
+    font-size:10px;
+  }
+
+  .menubar-container{
+    padding:1.5vh;
+  }
+}
