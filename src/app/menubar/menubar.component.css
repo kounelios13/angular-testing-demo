@@ -25,3 +25,21 @@
   //background: red;
   width: 100%;
 }
+
+
+@media screen and (max-width: 640px){
+  .menubar-link-container{
+    border:2px solid;
+    border-radius:5px;
+  }
+}
+
+@media screen and (max-width: 188px) {
+  .menubar-link{
+    font-size: 14px;
+  }
+
+  /*@TODO
+    Decrease margin between links
+  */
+}
