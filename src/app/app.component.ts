@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'demo-root',
@@ -8,4 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'testing';
   links = [{link: '/home', label: 'Home'}, {link: '/cars', label: 'Cars'}];
+  navBarColor = '#f44336';
+  linkColor = '#000000';
 }

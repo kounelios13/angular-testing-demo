@@ -9,7 +9,7 @@
 }
 
 .menubar-link{
-  transition:800ms ease-in-out;
+  /*transition:800ms ease-in-out;*/
   color:black;
   font-weight: bolder;
 }

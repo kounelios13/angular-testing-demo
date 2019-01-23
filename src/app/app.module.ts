@@ -15,6 +15,7 @@ import {MenubarModule} from './menubar/menubar.module';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {MenubarComponent} from './menubar/menubar.component';
+import {ColorPickerModule} from 'primeng/primeng';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {MenubarComponent} from './menubar/menubar.component';
     CardModule,
     FormsModule,
     HttpClientModule,
-    MenubarModule
+    MenubarModule,
+    ColorPickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,7 +3,8 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { ListModule } from './list/list.module';
 import {MenubarModule} from './menubar/menubar.module';
-import {MenubarComponent} from './menubar/menubar.component';
+import {ColorPickerModule} from 'primeng/primeng';
+import {FormsModule} from '@angular/forms';
 
 
 describe('AppComponent', () => {
@@ -12,7 +13,9 @@ describe('AppComponent', () => {
       imports: [
         RouterTestingModule,
         ListModule,
-        MenubarModule
+        MenubarModule,
+        ColorPickerModule,
+        FormsModule
       ],
       declarations: [
         AppComponent

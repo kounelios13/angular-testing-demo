@@ -1,2 +1,13 @@
-<demo-menubar [items]="links" linkColor="rgba(10,10,10,.8)" background="#f44336"></demo-menubar>
+<demo-menubar [items]="links" [linkColor]="linkColor" [background]="navBarColor"></demo-menubar>
 <router-outlet></router-outlet>
+
+<div class="ui-g">
+  <div class="ui-g-6">
+    <h1>Navbar color: {{navBarColor}}</h1>
+    <p-colorPicker [(ngModel)]="navBarColor"></p-colorPicker>
+  </div>
+  <div class="ui-g-6">
+    <h1>Link color: {{linkColor}}</h1>
+    <p-colorPicker [(ngModel)]="linkColor"></p-colorPicker>
+  </div>
+</div>
