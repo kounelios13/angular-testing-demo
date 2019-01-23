@@ -14,11 +14,11 @@ export class AppPage {
     return element.all(by.tagName('p-card'));
   }
 
-  getCarLink(){
+  getCarLink() {
     return element(by.css('#carsLink'));
   }
 
-  getPath(){
+  getPath() {
     return browser.getCurrentUrl();
   }
 }
