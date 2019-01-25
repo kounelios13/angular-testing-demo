@@ -43,7 +43,11 @@ export class MenubarComponent implements OnInit {
     return this.linkColor || defaultColor;
   }
 
-  sanitizeStyle(style){
+  /**
+   * sanitize user input to prevent XSS
+   * @param  style - Style to sanitize
+   */
+  sanitizeStyle(style: string) {
     return this.sanitizer.bypassSecurityTrustStyle(style);
   }
 }

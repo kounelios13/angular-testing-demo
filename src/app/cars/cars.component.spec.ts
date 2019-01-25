@@ -36,11 +36,6 @@ describe('CarsComponent', () => {
     expect(items.length).toBe(1);
   });
 
-  it(`should find all car items`, () => {
-    const items = fixture.nativeElement.querySelectorAll('.list-item');
-    expect(items.length).toEqual(component.cars.length);
-  });
-
 
   it('should receive 2 cars from service', async () => {
     // We need to manually call component life cycle hooks
