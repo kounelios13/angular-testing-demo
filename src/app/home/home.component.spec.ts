@@ -4,6 +4,7 @@ import {HomeComponent} from './home.component';
 import {ListComponent} from '../list/list.component';
 import {Card} from 'primeng/card';
 import {CarsComponent} from '../cars/cars.component';
+import {FormsModule} from '@angular/forms';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -11,6 +12,7 @@ describe('HomeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [FormsModule],
       declarations: [HomeComponent, ListComponent, Card, CarsComponent]
     })
       .compileComponents();

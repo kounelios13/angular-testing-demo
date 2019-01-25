@@ -1,14 +1,23 @@
-import { Injectable } from '@angular/core';
-import { of } from 'rxjs';
+import {Injectable} from '@angular/core';
+import {BehaviorSubject} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CarsService {
 
-  cars = ['Fiat', 'Mazda'];
-  constructor() { }
+  private data = ['Fiat', 'Mazda'];
+  private carsSubject = new BehaviorSubject(this.data);
+  private $cars = this.carsSubject.asObservable();
+
+  constructor() {
+  }
+
   getCars() {
-    return of(this.cars).toPromise();
+    return this.$cars;
+  }
+
+  addCar(car) {
+    this.data.push(car);
   }
 }

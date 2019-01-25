@@ -1,1 +1,6 @@
 <demo-list [items]="cars"></demo-list>
+<form (ngSubmit)="addCar()" #form="ngForm">
+  <label for="name">Car brand:</label>
+  <input type="text" name="name" required [(ngModel)]="car">
+  <button type="submit" [disabled]="form.invalid">Add car</button>
+</form>

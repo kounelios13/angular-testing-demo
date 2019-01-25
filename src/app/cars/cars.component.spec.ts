@@ -1,14 +1,16 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { CarsComponent } from './cars.component';
-import { ListComponent } from '../list/list.component';
-import { CarsService } from '../services/cars.service';
+import {CarsComponent} from './cars.component';
+import {ListComponent} from '../list/list.component';
+import {CarsService} from '../services/cars.service';
+import {FormsModule} from '@angular/forms';
 
 describe('CarsComponent', () => {
   let component: CarsComponent;
   let fixture: ComponentFixture<CarsComponent>;
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [FormsModule],
       declarations: [CarsComponent, ListComponent],
       providers: [CarsService]
     })
@@ -43,5 +45,21 @@ describe('CarsComponent', () => {
     fixture.detectChanges();
     const cars = component.cars;
     expect(cars.length).toBe(2);
+  });
+
+  it('adding a new car from form should update available cars in the component', async () => {
+    await component.ngOnInit();
+    const initialCars = component.cars.length;
+    component.car = 'dummy car';
+    component.addCar();
+    expect(component.cars.length).toEqual(initialCars + 1);
+  });
+
+  it('calling #addCar() should not affect available cars when car input is empty', async () => {
+    await component.ngOnInit();
+    const initialCars = component.cars;
+    component.addCar();
+    expect(initialCars).toBe(component.cars);
+    expect(initialCars.length).toEqual(component.cars.length);
   });
 });
