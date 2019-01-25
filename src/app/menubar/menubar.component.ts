@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {DomSanitizer} from '@angular/platform-browser';
 
 export interface MenuBarItem {
   link: string;
@@ -18,7 +19,9 @@ export class MenubarComponent implements OnInit {
   background: string;
   @Input()
   linkColor: string;
-  constructor() { }
+
+  constructor(private sanitizer: DomSanitizer) {
+  }
 
   ngOnInit() {
     this.background = this.background || 'rgba(0,0,0,.8) !important';
@@ -38,5 +41,9 @@ export class MenubarComponent implements OnInit {
   getLinkColor() {
     const defaultColor = 'black';
     return this.linkColor || defaultColor;
+  }
+
+  sanitizeStyle(style){
+    return this.sanitizer.bypassSecurityTrustStyle(style);
   }
 }

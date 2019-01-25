@@ -23,4 +23,30 @@ describe('ListComponent', () => {
     fixture.detectChanges();
     expect(component).toBeTruthy();
   });
+
+  it('should not be visible when [visible]=false', () => {
+    component.items = ['Item 1', 'Item 2'];
+    component.visible = false;
+    fixture.detectChanges();
+    const nativeElement: any = fixture.nativeElement;
+    const list = nativeElement.querySelector('.app-list');
+    expect(list.style.visible).toBe('false');
+  });
+
+  it('should  be visible when [visible]=true', () => {
+    component.items = ['Item 1', 'Item 2'];
+    component.visible = true;
+    fixture.detectChanges();
+    const nativeElement: any = fixture.nativeElement;
+    const list = nativeElement.querySelector('.app-list');
+    expect(list.style.visible).not.toBe('false');
+  });
+
+  it('should contain .highligted class when [highlight]=true', () => {
+    component.highlighted = true;
+    fixture.detectChanges();
+    const nativeElement: any = fixture.nativeElement;
+    const list = nativeElement.querySelector('.app-list');
+    expect(list.classList).toContain('highlighted');
+  });
 });
