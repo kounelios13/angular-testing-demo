@@ -12,7 +12,8 @@ export interface MenuBarItem {
   styleUrls: ['./menubar.component.css']
 })
 export class MenubarComponent implements OnInit {
-
+  private defaultNavbarBackground = 'rgba(0,0,0,.8) !important';
+  private defaultLinkColor = 'black';
   @Input()
   items: MenuBarItem[];
   @Input()
@@ -24,11 +25,12 @@ export class MenubarComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.background = this.background || 'rgba(0,0,0,.8) !important';
+    this.background = this.background || this.defaultNavbarBackground;
+    this.linkColor = this.linkColor || this.defaultLinkColor;
   }
 
   getBackgroundColor() {
-    return this.background || 'rgba(0,0,0,.8) !important';
+    return this.background;
   }
 
   getGridClass() {
@@ -39,8 +41,7 @@ export class MenubarComponent implements OnInit {
   }
 
   getLinkColor() {
-    const defaultColor = 'black';
-    return this.linkColor || defaultColor;
+    return this.linkColor;
   }
 
   /**

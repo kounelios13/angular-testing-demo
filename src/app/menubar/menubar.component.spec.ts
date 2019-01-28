@@ -42,11 +42,6 @@ describe('MenubarComponent', () => {
       });
   });
 
-  it('default menu background should be rgba(0,0,0,.8) !important', async () => {
-    await component.ngOnInit();
-    expect(component.background).toBe('rgba(0,0,0,.8) !important');
-  });
-
   it('menu background should be rgba(1,1,1,.8)', async () => {
     await component.ngOnInit();
     const bgColor = 'rgba(1,1,1,.8)';
@@ -83,5 +78,19 @@ describe('MenubarComponent', () => {
     fixture.detectChanges();
     const menubar = fixture.nativeElement.querySelector('.menubar');
     expect(menubar.style.background).toBe('yellow');
+  });
+
+  it('getBackground() should return "rgba(0,0,0,.8) !important" when no default navbar color has been provided', () => {
+    component.ngOnInit();
+    const expected = 'rgba(0,0,0,.8) !important';
+    const actual = component.getBackgroundColor();
+    expect(actual).toBe(expected);
+  });
+
+  it('getBackground() should return blue', () => {
+    component.ngOnInit();
+    const expected = 'blue';
+    component.background = expected;
+    expect(component.getBackgroundColor()).toBe(expected);
   });
 });
