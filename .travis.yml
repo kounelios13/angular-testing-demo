@@ -5,6 +5,9 @@ addons:
 language: node_js
 node_js:
   - "8"
+ 
+services:
+  - xvfb
 
 branches:
   only:
